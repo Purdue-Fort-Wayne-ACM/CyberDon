@@ -31,3 +31,34 @@ Second blogs build awareness. Having club work and posts _out there_ where they 
 Finally it's fun! I wanted to make it so I did, and sometimes that's the best reason~
 
 # Stomping Forward
+
+The goal is that this blog develops over time, and with it the writing skills of our members.
+
+In terms of content, I'm hoping that this blog can address many of the following subjects:
+
+*   The ACMs participation in CTFs
+    
+*   Cybersecurity news
+    
+*   Threat actor/APT news
+    
+*   Ethical Hacking Techniques
+    
+*   LLM prompt engineering and information disclosure
+    
+*   Compliance and vulnerability management
+    
+*   Security awareness
+    
+*   Security research
+    
+*   Incident detection & response
+    
+*   IoT security
+    
+*   Cybersecurity Education (K-12 Audiences, both staff and student)
+    
+
+Obviously we'll only ever address what our members contribute to, so this is also hope for the club's exploration of these topics. My main want is that no-one is scared to contribute, or at least risk trying to.
+
+I think I've written enough for a hello. I'm wishing you all the best, and hoping for an awesome year.
