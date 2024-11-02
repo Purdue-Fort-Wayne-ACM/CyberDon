@@ -61,4 +61,4 @@ In terms of content, I'm hoping that this blog can address many of the following
 
 Obviously we'll only ever address what our members contribute to, so this is also hope for the club's exploration of these topics. My main want is that no-one is scared to contribute, or at least risk trying to.
 
-I think I've written enough for a hello. I'm wishing you all the best, and hoping for an awesome year.
+I think I've written enough for a hello. I'm wishing you all the best, and hoping for an awesome year. Remember, a hacker’s worst enemy is a well-informed user! Until next time, keep your skills updated and your software patched!
