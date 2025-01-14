@@ -153,7 +153,7 @@ If a student account is compromised and used to connect to the VPN, it may be ea
 
 ### Blocking known attacker infrastructure
 
-### When the University identifies attacker controlled websites, forms, links, or C2 infrastructure, blocking it on the University network, or blocking it from connecting to the University VPN, can stop the attack for all users of the VPN. This allows the school to control the response timeline more acutely than if they report it to the service hosting the attacker's infrastructure, which may take hours to days to perform a takedown.
+When the University identifies attacker controlled websites, forms, links, or C2 infrastructure, blocking it on the University network, or blocking it from connecting to the University VPN, can stop the attack for all users of the VPN. This allows the school to control the response timeline more acutely than if they report it to the service hosting the attacker's infrastructure, which may take hours to days to perform a takedown.
 
 ### Allows more strict firewall rules
 
