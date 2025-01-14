@@ -47,6 +47,16 @@ You can use CAS protected services without the VPN. You cannot _authenticate_ to
 
 You are not being forced to use the VPN constantly, nor in every interaction you have off campus. In fact, if you have a way of sharing sessions between devices you can have a device that has the VPN and one that doesn't.
 
+## Liability
+
+We talked about a bunch of information the CAS can access, and we can probably agree that CAS accounts are being accessed. Here's where the University gets interested.
+
+Universities, especially those funded using public funds, are expected to meet certain guidelines for security and data protection. When they fail to do so, they may be subject to fees, loss of funding, or loss of certain licenses and abilities. In particular, we can think of FERPA, GLBA, COPPA, ECPA, HIPAA, and likely a couple other more federal, corporate, and local licensing and privacy rules. When student accounts have wide access, and student accounts are compromised - and used to compromise other accounts - this presents a liability issue. The University needs to make good faith attempts to secure this data, and in some cases are liable regardless of what they tried or didn't try if they fail.
+
+Implementing VPN policies is a common response for Schools and Universities when it comes to securing and monitoring this information, alongside identifying the scope of damage(s) to information and information assets.
+
+I could harp about this one forever, but know that the Uni's interest primarily lies here.
+
 # What can the VPN even do? What's the intention?
 
 Many students are confused about what the VPN could assist with, and many suspect alternative aims or incompetency. While neither avenue is outside of scope for PFW, I believe there's a solid case for the VPN and don't suspect a malicious plot. First, let's take a look at what's being said.
@@ -88,6 +98,8 @@ It is possible to encrypt DNS requests, but most users don't do it, and as far a
 
 The amount of effort, and lack of gain, for PFW to be spying through the VPN makes it extremely unlikely. However, it is true that the client presents the potential for a rogue actor to attempt to access student systems. Specifically, the VPN has remote access capabilities, local LAN capabilities, and local printer capabilities - presenting an ideal target for enumeration and lateral movement, as well as attacking the client system. It is not unheard of for rogue workers to abuse such privileges against company policies for personal gain, it's happened at TikTok, Facebook, and more. I would be interested in PFW's way of addressing this.
 
+**NOTE:** I will note that it is likely possible to use your own compliant client with the University's VPN. Using something like Cisco OpenConnect would mitigate many of these issues, and should comply with the AnyConnect protocol. Just ensure to set the endpoint to "webvpn.pfw.edu".
+
 ### The VPN shouldn't affect students already using a VPN
 
 The goal isn't for students to 'have a VPN'. It's for students to access campus resources from campus, and to identify a clear and common endpoint for those beyond campus. Whether you were already using a VPN or not is irrelevant to that. I will note that another VPN would likely be more secure, but I would also note that you should only use the University's VPN for accessing its resources - making this a moot concern in my opinion.
@@ -115,3 +127,48 @@ Likewise, there exists the potential for hackers to guide students towards fake 
 This is a correct statement.
 
 ## What can the VPN do?
+
+The VPN is a client that connects to an endpoint and tunnels traffic through campus internet. With West Lafayette as our ISP, this places a lot of control in PFW & Purdue's hands. Here's a list of benefits I could see:
+
+*   Narrowing service attack points
+    
+*   Identifying Devices/IPs accessing the VPN
+    
+*   Blocking known attacker infrastructure
+    
+*   Allows more strict firewall rules
+    
+*   Protect students on less secure networks or infrastructure
+    
+*   Adds a step to service attacks
+    
+
+### Narrowing service attack points
+
+If you only have to filter from a list of VPN users rather than the entire internet, your threat scope narrows. You can focus more on validating who should be accessing the VPN, what patterns they're showing and how those deviate from the norm, and requiring an attacker to become more familiar with the University's processes to launch an attack.
+
+### Identifying Devices/IPs accessing the VPN
+
+If a student account is compromised and used to connect to the VPN, it may be easier to identify who the attacker is based on data from the VPN or connection. This may result in larger-view goals of pursuing the people initiating these attacks, or identifying patterns indicating where the attackers come from, or when a device may be attacker controlled. This may also help in separating between good accounts, students maliciously using resources, and clearly attacker controlled accounts.
+
+### Blocking known attacker infrastructure
+
+### When the University identifies attacker controlled websites, forms, links, or C2 infrastructure, blocking it on the University network, or blocking it from connecting to the University VPN, can stop the attack for all users of the VPN. This allows the school to control the response timeline more acutely than if they report it to the service hosting the attacker's infrastructure, which may take hours to days to perform a takedown.
+
+### Allows more strict firewall rules
+
+The school can focus on authenticating the VPN, rather than having to accept any connection attempted on CAS. This means the school can block an entire species of traffic, and narrow down on traffic coming into the VPN endpoint.
+
+### Protect students on less secure networks or infrastructure
+
+The VPN could, do what VPNs do lmao.
+
+### Adds a step to service attacks
+
+Ultimately you can't prevent hacks. But the goal is always to make them more time consuming, harder to launch, harder to continue, less rewarding, more likely to be traced, more likely to be punished, and more harshly punished. It's to continuously raise the bar and motivate more attackers to stop trying.
+
+# Closing
+
+This is not unusual. I do not suspect there is any secretive goal or motive. It is a common practice for Universities to require this of their students, and it's an unfortunate artifact of the constant attacks against Universities, and the reality that the aggregate of users - regardless of individuals - are often not interested, diligent, or attentive enough to prevent common security pitfalls. We can work to achieve better and more convenient security features as a campus, while also maintaining debate on whether or not our current practices are the best.
+
+Stay safe y'all, and hopefully this semester slays regardless of the rocky start!
