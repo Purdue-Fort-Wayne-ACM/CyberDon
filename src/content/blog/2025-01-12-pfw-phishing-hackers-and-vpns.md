@@ -20,3 +20,5 @@ _As a personal note, this article represents my opinion - not that of the ACM or
 # What's happening?
 
 PFW has recently broadened the expectations for what services must be accessed using a VPN into the University network. This is in response to an increase in both volume and sophistication of attacks targeting PFW and Purdue students (Purdue emails trickle into PFW inboxes). Specifically, the requirement has been broadened to include CAS or the Central Authentication Service. The email heads as follows:
+
+> "As we welcome students, faculty, and staff back for the spring semester, we continue to seek ways to strengthen the security posture across the Purdue University system. Effective immediately, we will now require connection to a Virtual Private Network, or VPN, before Purdue University Fort Wayne and Indiana University Fort Wayne users can access Central Authentication Service, or CAS, while off campus." - PFW ITS
