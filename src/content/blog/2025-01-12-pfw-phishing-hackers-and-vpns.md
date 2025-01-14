@@ -86,4 +86,28 @@ Using the VPN is the same as browsing and operating from within PFW. In the mode
 
 It is possible to encrypt DNS requests, but most users don't do it, and as far as I know PFW blocks encrypted DNS. But they don't block TLS - allowing encrypted website connections. There are attacks the University could perform to weaken or subvert website encryption, but it would be processing intense and, in many cases, tedious. So, the University can see what sites you go to and when, but not necessarily what pages or what's on them.
 
+The amount of effort, and lack of gain, for PFW to be spying through the VPN makes it extremely unlikely. However, it is true that the client presents the potential for a rogue actor to attempt to access student systems. Specifically, the VPN has remote access capabilities, local LAN capabilities, and local printer capabilities - presenting an ideal target for enumeration and lateral movement, as well as attacking the client system. It is not unheard of for rogue workers to abuse such privileges against company policies for personal gain, it's happened at TikTok, Facebook, and more. I would be interested in PFW's way of addressing this.
+
+### The VPN shouldn't affect students already using a VPN
+
+The goal isn't for students to 'have a VPN'. It's for students to access campus resources from campus, and to identify a clear and common endpoint for those beyond campus. Whether you were already using a VPN or not is irrelevant to that. I will note that another VPN would likely be more secure, but I would also note that you should only use the University's VPN for accessing its resources - making this a moot concern in my opinion.
+
+### The VPN has kernel-level access
+
+I have seen no evidence of this, and did not need to grant such access when installing this VPN on any devices. Extraordinary claims require the matching evidence, so if I'm wrong please do correct me.
+
+### The VPN is required, for everyone
+
+The VPN is for off-campus students. You don't need to use it on campus. You also don't have to use if off campus if you're not attempting to access specific University resources. You are not being required to use it, you are being required to use it to access specific resources, and there is a difference.
+
+### The VPN doesn't work
+
+I can confirm the VPN has intermittent authentication issues. It does indeed work, but it seems that there may either by an unknown issue present, or its experiencing load issues.
+
+### The VPN is a security risk
+
+This is accurate. I believe the VPN presents a greater opportunity for high-risk phishing attempts due to implementation, and I believe that it may be a security risk.
+
+While there is some inaccurate conflation between Cisco hacks and insecurities in the Cisco AnyConnect Client, the VPN client is indeed a high-risk target
+
 ## T
