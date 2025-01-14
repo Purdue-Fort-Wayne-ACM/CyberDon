@@ -1,7 +1,7 @@
 ---
 author: Brian Waltz
 pubDatetime: 2025-01-12
-modDatetime: 2025-01-12
+modDatetime: 2025-01-13
 title: PFW - Phishing, Hackers, and VPNs
 slug: PFW-VPN-2025-1
 featured: true
