@@ -5,7 +5,7 @@ modDatetime: 2025-01-12
 title: PFW - Phishing, Hackers, and VPNs
 slug: PFW-VPN-2025-1
 featured: true
-draft: true
+draft: false
 tags:
   - PFW
   - Hacking
