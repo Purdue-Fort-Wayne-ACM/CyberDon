@@ -108,6 +108,10 @@ I can confirm the VPN has intermittent authentication issues. It does indeed wor
 
 This is accurate. I believe the VPN presents a greater opportunity for high-risk phishing attempts due to implementation, and I believe that it may be a security risk.
 
-While there is some inaccurate conflation between Cisco hacks and insecurities in the Cisco AnyConnect Client, the VPN client is indeed a high-risk target
+While there is some inaccurate conflation between Cisco hacks and insecurities in the Cisco AnyConnect Client, the VPN client is indeed a high-risk target, and has indeed been attacked before with both novel attacks, and several year old vulnerabilities. I'd like to assume the manufacturer & University will be diligent in issuing patches, and students diligent in installing them, but reality is often disappointing.
 
-## T
+Likewise, there exists the potential for hackers to guide students towards fake or backdoored VPN clients, defeating the point, and presenting an even higher risk. A backdoored client would be able to easily steal a user's CAS credentials, while performing attacks from their personal device & IP, and even accessing private files and information on the device.
+
+This is a correct statement.
+
+## What can the VPN do?
