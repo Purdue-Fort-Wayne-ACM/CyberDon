@@ -19,6 +19,71 @@ _As a personal note, this article represents my opinion - not that of the ACM or
 
 # What's happening?
 
-PFW has recently broadened the expectations for what services must be accessed using a VPN into the University network. This is in response to an increase in both volume and sophistication of attacks targeting PFW and Purdue students (Purdue emails trickle into PFW inboxes). Specifically, the requirement has been broadened to include CAS or the Central Authentication Service. The email heads as follows:
+PFW has recently broadened the expectations for what services must be accessed using a VPN into the University network, affecting those who are accessing Uni resources off-campus. This is in response to an increase in both volume and sophistication of attacks targeting PFW and Purdue students (Purdue emails trickle into PFW inboxes). Specifically, the requirement has been broadened to include CAS or the Central Authentication Service. The email heads as follows:
 
 > "As we welcome students, faculty, and staff back for the spring semester, we continue to seek ways to strengthen the security posture across the Purdue University system. Effective immediately, we will now require connection to a Virtual Private Network, or VPN, before Purdue University Fort Wayne and Indiana University Fort Wayne users can access Central Authentication Service, or CAS, while off campus." - PFW ITS
+
+First, let it be said that this VPN is NOT new. While it is new to many students, the requirement has existed for several years. Resources which are considered targets for those off campus generally need to be accessed through the VPN when off campus. I have used the VPN for a couple of years, and in fact the student body has received information about it in the past. However, I must acknowledge that it is certainly a disruption to the typical user-flow of the average student - and it was timed poorly in implementation. I also do not believe it is the most effective solution to this problem, but I also don't necessarily believe it's the entirety of the solution.
+
+This inconvenience is likely a large part of why many students are upset, something I entirely understand. But there is also a significant amount of misunderstanding, and conspiracy theorizing, surrounding the recent decision. _That_ is what I would like to address through some analysis of what's happening, what's affected, how this could help, and combatting a few common complaints.
+
+# What does this affect?
+
+## CAS
+
+This change specifically affects CAS. CAS is the University's Single-Sign-On system (really a protocol, Shibboleth is the system).
+
+A Single Sign On system/service (Commonly an SSO) is something that manages and administers user authentication centrally, allowing other apps to delegate requests to it. You have likely noticed that when attempting to sign-in to a variety of different websites, you get redirected to the CAS sign-in before being allowed to sign-in. Those apps trust the CAS to do all the work of managing and validating users, and the CAS just tells them what it decides in the end.
+
+This is helpful for managing a large number of different services in a secure and efficient manner. If your users want to have a sign-in for ten websites, and all ten support CAS, then both you and them only need to manage and secure one CAS account.
+
+But this also creates a centralized _target_.
+
+A CAS account being stolen gives an attacker access to all of the services that user could access, until the account is properly identified and secured. This means students may have educational record, assignments, messages and communications, health information, club affiliations, financial information and more. These accounts are _certainly_ being stolen - you've likely witnessed a stolen account sending emails. I'll be writing specifically about the recent phishing emails, but it's also true that they've increased in sophistication - using information scraped from Student Life, more stylistic emails, making fake CAS pages, etc.
+
+## Everything else?
+
+You can use CAS protected services without the VPN. You cannot _authenticate_ to them. However if you were already authenticated, or if you authenticate on the VPN, you don't need to remain on the VPN. The website stores information about your browsing session, including whether and how you authenticated. If the website has a valid record saying you authenticated, it doesn't care whether you can authenticate again. Any flow you can complete without encountering the CAS screen (or other VPN mandated services) can be done off the VPN. I have personally validated this, though I cannot speak to every setup (e.g. if you clear cookies, use incognito, have an unsupported browser, this may not be the case).
+
+You are not being forced to use the VPN constantly, nor in every interaction you have off campus. In fact, if you have a way of sharing sessions between devices you can have a device that has the VPN and one that doesn't.
+
+# What can the VPN even do? What's the intention?
+
+Many students are confused about what the VPN could assist with, and many suspect alternative aims or incompetency. While neither avenue is outside of scope for PFW, I believe there's a solid case for the VPN and don't suspect a malicious plot. First, let's take a look at what's being said.
+
+## Student Comments
+
+Reviewing PFW's discord servers, the Snap stories, and actual conversations, here's a list of what I've heard:
+
+*   The VPN is meant to block TikTok
+    
+*   The VPN is spyware
+    
+*   The VPN shouldn't affect students already using a VPN
+    
+*   The VPN has kernel level access
+    
+*   The VPN is required, for everyone
+    
+*   The VPN doesn't work
+    
+*   The VPN is a security risk
+    
+
+### The VPN is meant to block TikTok
+
+No. The University already blocks TikTok. They have no real interests in whether you use TikTok, but can't allow it on their networks. This doesn't block TikTok from you unless you have it on while browsing TikTok - something you're not expected to do.
+
+### The VPN is spyware
+
+This one is interesting. It is complex to answer, and I cannot say with certainty. My ultimate answer is no, and I don't particularly see why the University would want to spy on all off-campus students - nor why they would use a blatant method when there are better methods available.
+
+To be perfectly clear, the University has access to devices that use their Microsoft accounts. There are thousands of student devices that are 'enrolled' to PFW accounts but are private devices. Some services require that they can manage or see certain aspects of your device. There are more safeguards present in that process than there are for Cisco's VPN, but the ability has not been absent on the University's end. I am unaware of any instance of it being used. Further, if you have Microsoft ads, services, or apps in your user-journey while signed into your account, the University can likely see (either directly or by scraping their data) what was happening there as blips. If the University interest was spying, I believe it would happen.
+
+The argument in this case is that the University can 'see all traffic' through the VPN. That is not accurate, but also not inaccurate. A VPN routes traffic through itself to an endpoint, encrypting it in the process, and once it reaches its endpoint the traffic flows normally. The endpoint does the same in reverse, sending what traffic flows to it back to the user's VPN client, where it's decrypted. VPN's are nice because to an observer outside the VPN, all they see is the connection to the VPN. To the VPN provider though, it looks normal.
+
+Using the VPN is the same as browsing and operating from within PFW. In the modern age, almost all sites use HTTPS - the encrypted HTTP standard. This means your web-traffic, the content of the page, is encrypted. This means ISPs and VPNs alike can't actually see the _content_ of your browsing activity. Now, there is another step to the process of browsing that they can see - DNS. DNS, also known as Domain Name Servicing, converts website names like "google.com" into the address information necessary to communicate with the website.
+
+It is possible to encrypt DNS requests, but most users don't do it, and as far as I know PFW blocks encrypted DNS. But they don't block TLS - allowing encrypted website connections. There are attacks the University could perform to weaken or subvert website encryption, but it would be processing intense and, in many cases, tedious. So, the University can see what sites you go to and when, but not necessarily what pages or what's on them.
+
+## T
