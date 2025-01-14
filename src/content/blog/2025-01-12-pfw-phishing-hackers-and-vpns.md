@@ -169,6 +169,10 @@ Ultimately you can't prevent hacks. But the goal is always to make them more tim
 
 # Closing
 
-This is not unusual. I do not suspect there is any secretive goal or motive. It is a common practice for Universities to require this of their students, and it's an unfortunate artifact of the constant attacks against Universities, and the reality that the aggregate of users - regardless of individuals - are often not interested, diligent, or attentive enough to prevent common security pitfalls. We can work to achieve better and more convenient security features as a campus, while also maintaining debate on whether or not our current practices are the best.
+This is not unusual. I do not suspect there is any secretive goal or motive. It is a common practice for Universities to require this of their students, and it's an unfortunate artifact of the constant attacks against Universities, and the reality that the aggregate of users - regardless of individuals - are often not interested, diligent, or attentive enough to prevent common security pitfalls. The level of University access to devices with the complete client installed (this may differ for other clients, or mobile devices) is the same as the University has to its own devices on its own network, though it has less permissions (literal operational ability) to your device than it would to its own devices. This goes from what they see in the network traffic to remote device access.
+
+We can work to achieve better and more convenient security features as a campus, while also maintaining debate on whether or not our current practices are the best.
 
 Stay safe y'all, and hopefully this semester slays regardless of the rocky start!
+
+> If you have any corrections, comments, or concerns, feel free to email [acm@pfw.edu](mailto:acm@pfw.edu) with the title of this article as the subject. If the University would like to add comments or corrections, please notify us in the same manner. Thank you!
