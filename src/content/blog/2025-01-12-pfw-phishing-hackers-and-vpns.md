@@ -175,4 +175,6 @@ We can work to achieve better and more convenient security features as a campus,
 
 Stay safe y'all, and hopefully this semester slays regardless of the rocky start!
 
+\\- Brian W
+
 > If you have any corrections, comments, or concerns, feel free to email [acm@pfw.edu](mailto:acm@pfw.edu) with the title of this article as the subject. If the University would like to add comments or corrections, please notify us in the same manner. Thank you!
